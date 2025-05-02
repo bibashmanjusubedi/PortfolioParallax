@@ -1,0 +1,19 @@
+nav {
+    background-color: black;
+    width: 100%; /* Ensures the navbar takes up the full width of the screen */
+    display:flex;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px;
+    background-color: #dddddd;
+}
+
+nav a:not(:last-child) {
+    margin-right: 10px;         /* Space between links except last */
+}
+
+nav a:last-child {
+    margin-left: auto;          /* Pushes this link (search icon) to the far right */
+}
