@@ -17,3 +17,13 @@ nav a:not(:last-child) {
 nav a:last-child {
     margin-left: auto;          /* Pushes this link (search icon) to the far right */
 }
+
+.background-image-section{
+    width:100%;
+    height:400px;
+    background-image: url('demoforCover.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
