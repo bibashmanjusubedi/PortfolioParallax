@@ -25,5 +25,20 @@ nav a:last-child {
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
+    position:relative;
+}
 
+.black-box{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:black;
+    color:white;
+    padding: 24px 48px;/* Optional: rounded corners */
+    border-radius: 8px;
+    font-size: 8 rem;
+    font-weight:bold;
+    box-shadow:0 4px 16px rgba(0,0,0,0.3);/* Optional: subtle shadow */
+    text-align:center;
 }
