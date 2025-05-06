@@ -66,7 +66,7 @@ nav a:last-child {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background: black;
+	background: brown;
 	color: white;
 	padding: 24px 48px; /* Optional: rounded corners */
 	border-radius: 8px;
