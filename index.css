@@ -1,44 +1,77 @@
 nav {
-    background-color: black;
-    width: 100%; /* Ensures the navbar takes up the full width of the screen */
-    display:flex;
+	background-color: black;
+	width: 100%; /* Ensures the navbar takes up the full width of the screen */
+	display: flex;
 }
 
 nav a {
-    display: inline-block;
-    padding: 8px;
-    background-color: #dddddd;
+	display: inline-block;
+	padding: 8px;
+	background-color: #dddddd;
 }
 
 nav a:not(:last-child) {
-    margin-right: 10px;         /* Space between links except last */
+	margin-right: 10px; /* Space between links except last */
 }
 
 nav a:last-child {
-    margin-left: auto;          /* Pushes this link (search icon) to the far right */
+	margin-left: auto; /* Pushes this link (search icon) to the far right */
 }
 
-.background-image-section{
-    width:100%;
-    height:400px;
-    background-image: url('demoforCover.jpg');
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position:relative;
+.background-image-section {
+	width: 100%;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
 }
 
-.black-box{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    background:black;
-    color:white;
-    padding: 24px 48px;/* Optional: rounded corners */
-    border-radius: 8px;
-    font-size: 8 rem;
-    font-weight:bold;
-    box-shadow:0 4px 16px rgba(0,0,0,0.3);/* Optional: subtle shadow */
-    text-align:center;
+.slider {
+	display: flex;
+	animation: slide 25s infinite ease-in-out;
+}
+
+.slider img {
+	width: 100%;
+	height: 400px;
+	/* object-fit: cover; */
+	flex-shrink: 0;
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(0%);
+	}
+	16.66% {
+		transform: translateX(-100%);
+	}
+	33.32% {
+		transform: translateX(-200%);
+	}
+	49.98% {
+		transform: translateX(-300%);
+	}
+	66.64% {
+		transform: translateX(-400%);
+	}
+	83.3% {
+		transform: translateX(-500%);
+	}
+	100% {
+		transform: translateX(0%);
+	} /* Loop back to start */
+}
+
+.black-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: black;
+	color: white;
+	padding: 24px 48px; /* Optional: rounded corners */
+	border-radius: 8px;
+	font-size: 8 rem;
+	font-weight: bold;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* Optional: subtle shadow */
+	text-align: center;
 }
