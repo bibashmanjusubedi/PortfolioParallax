@@ -27,7 +27,7 @@ nav a:last-child {
 
 .slider {
 	display: flex;
-	animation: slide 25s infinite ease-in-out;
+	animation: slide 10s infinite ease-in-out;
 }
 
 .slider img {
@@ -39,27 +39,18 @@ nav a:last-child {
 
 @keyframes slide {
 	0% {
-		transform: translateX(0%);
+	  transform: translateX(0%);
 	}
-	16.66% {
-		transform: translateX(-100%);
+	33.33% {
+	  transform: translateX(-100%);
 	}
-	33.32% {
-		transform: translateX(-200%);
-	}
-	49.98% {
-		transform: translateX(-300%);
-	}
-	66.64% {
-		transform: translateX(-400%);
-	}
-	83.3% {
-		transform: translateX(-500%);
+	66.66% {
+	  transform: translateX(-200%);
 	}
 	100% {
-		transform: translateX(0%);
-	} /* Loop back to start */
-}
+	  transform: translateX(0%); /* Loop back to first image */
+	}
+  }
 
 .black-box {
 	position: absolute;
