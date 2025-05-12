@@ -66,3 +66,11 @@ nav a:last-child {
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* Optional: subtle shadow */
 	text-align: center;
 }
+
+#AboutUs{
+	text-align:center ;
+}
+
+#progressBar{
+	text-align:center;
+}
