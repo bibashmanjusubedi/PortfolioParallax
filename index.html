@@ -10,6 +10,20 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 		/>
 		<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+		
+		<style>
+			
+			
+			/* Basic dark mode styles - customize as needed */
+			.dark-mode {
+				background-color: #121212;
+				color: #f0f0f0;
+			}
+			
+			.dark-mode header {
+				background-color: #1a1a1a;
+			}
+		</style>
 	</head>
 	<body>
 		<header>
@@ -19,6 +33,10 @@
 				<a href="#">Portfolio</a>
 				<a href="#">Contact</a>
 				<a href="#"><i class="fa fa-search"></i></a>
+				<button class="theme-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+					<i class="fas fa-sun sun-icon"></i>
+					<i class="fas fa-moon moon-icon"></i>
+				</button>
 			</nav>
 		</header>
 
@@ -42,5 +60,7 @@
 			<label for="file">Software Development</label>
 			<progress id="file" value="60" max="100"> 32% </progress>
 		</div>
+		<script src="index.js">
+		</script>
 	</body>
 </html>
