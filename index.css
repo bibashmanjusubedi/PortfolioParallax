@@ -52,10 +52,13 @@ body {
   nav a:not(:last-child) {
 	margin-right: 10px;
   }
-  
+/*   
   nav a:last-child {
 	margin-left: auto;
-  }
+  } */
+  /* .theme-toggle{
+	margin-left: auto;
+  } */
   
   /* Theme Toggle Button */
   .theme-toggle {
@@ -265,3 +268,32 @@ nav a {
     height: 826px; /* fixed height for all */
     object-fit: cover; /* fill space without distortion */
 }
+
+nav {
+	background-color: black;
+	width: 100%;
+	display: flex;
+	align-items: center;     /* vertical alignment */
+	gap: 10px;               /* spacing between items */
+  }
+  
+  nav a:last-child {
+	margin-left: 0; /* remove this rule */
+  }
+  
+  .theme-toggle {
+	margin-left: auto;  /* push ONLY the toggle button to the far right */
+  }
+  
+
+  nav {
+	display: flex;
+	justify-content: space-between; /* links on left, toggle on right */
+	align-items: center;
+  }
+  
+  .nav-links {
+	display: flex;
+	gap: 10px; /* spacing between links */
+  }
+  
