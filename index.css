@@ -297,3 +297,10 @@ nav {
 	gap: 10px; /* spacing between links */
   }
   
+  .carousel-inner img {
+	width: 960px;     /* fixed width */
+	height: 720px;    /* fixed height */
+	object-fit: cover; /* crop without distortion */
+	margin: 0 auto;    /* center horizontally */
+  }
+  
