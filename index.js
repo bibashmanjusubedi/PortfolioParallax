@@ -51,3 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+
+$('#carouselExampleSlidesOnly').carousel({
+  pause: false
+})
