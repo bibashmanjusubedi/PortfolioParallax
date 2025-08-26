@@ -146,6 +146,10 @@ body.dark-mode .moon-icon {
 	text-align: center;
 }
 
+#progressBar h1{
+	text-align:center;
+}
+
 /* ---------------- Progress Bars ---------------- */
 progress {
 	width: 80%;
