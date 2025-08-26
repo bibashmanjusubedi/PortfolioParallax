@@ -1,32 +1,39 @@
-/* Base Styles */
+/* ---------------- Base Styles ---------------- */
 body {
 	padding: 25px;
 	background-color: white;
 	color: black;
 	font-size: 25px;
 	transition: all 0.3s ease;
-  }
-  
-  /* Dark Mode Styles */
-  body.dark-mode {
+}
+
+body.dark-mode {
 	background-color: #121212;
 	color: #f0f0f0;
-  }
-  
-  /* Navigation */
-  nav {
+}
+
+/* ---------------- Navigation ---------------- */
+nav {
 	background-color: black;
 	width: 100%;
 	display: flex;
+	align-items: center;
+	justify-content: space-between; /* links on left, toggle on right */
+	gap: 10px;
 	padding: 10px;
 	transition: background-color 0.3s ease;
-  }
-  
-  .dark-mode nav {
+}
+
+.dark-mode nav {
 	background-color: #1e1e1e;
-  }
-  
-  nav a {
+}
+
+.nav-links {
+	display: flex;
+	gap: 10px;
+}
+
+nav a {
 	display: inline-block;
 	padding: 12px 16px;
 	background-color: #dddddd;
@@ -34,91 +41,82 @@ body {
 	text-decoration: none;
 	border-radius: 4px;
 	transition: all 0.3s ease;
-  }
-  
-  .dark-mode nav a {
+}
+
+nav a:hover {
+	background-color: #bbb;
+}
+
+.dark-mode nav a {
 	background-color: #333;
 	color: #f0f0f0;
-  }
-  
-  nav a:hover {
-	background-color: #bbb;
-  }
-  
-  .dark-mode nav a:hover {
+}
+
+.dark-mode nav a:hover {
 	background-color: #555;
-  }
-  
-  nav a:not(:last-child) {
-	margin-right: 10px;
-  }
-/*   
-  nav a:last-child {
-	margin-left: auto;
-  } */
-  /* .theme-toggle{
-	margin-left: auto;
-  } */
-  
-  /* Theme Toggle Button */
-  .theme-toggle {
+}
+
+/* ---------------- Theme Toggle Button ---------------- */
+.theme-toggle {
 	background: none;
 	border: none;
 	cursor: pointer;
-	padding: 8px 12px;
-	color: #f0f0f0;
+	padding: 8px;
 	font-size: 1.2rem;
-	margin-left: 10px;
-	border-radius: 4px;
-	transition: all 0.3s ease;
-  }
-  
-  .theme-toggle:hover {
-	background-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  .dark-mode .theme-toggle {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: auto; /* push toggle to far right */
+	position: relative;
+}
+
+.sun-icon, .moon-icon {
+	position: absolute;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Light mode */
+body:not(.dark-mode) .sun-icon {
+	opacity: 1;
+	transform: rotate(0deg);
+	color: inherit;
+}
+
+body:not(.dark-mode) .moon-icon {
+	opacity: 0;
+	transform: rotate(-90deg);
+}
+
+/* Dark mode */
+body.dark-mode .sun-icon {
+	opacity: 0;
+	transform: rotate(90deg);
+}
+
+body.dark-mode .moon-icon {
+	opacity: 1;
+	transform: rotate(0deg);
 	color: #ffd700;
-  }
-  
-  /* Slider Section */
-  .background-image-section {
+}
+
+/* ---------------- Slider Section ---------------- */
+.background-image-section {
 	width: 100%;
-	height: 400px;
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 30px;
-  }
-  
-  .slider {
-	display: flex;
-	animation: slide 15s infinite ease-in-out;
-  }
-  
-  .slider img {
-	width: 100%;
-	height: 400px;
+}
+
+.carousel-inner img {
+	width: 960px;
+	height: 720px;
 	object-fit: cover;
-	flex-shrink: 0;
-  }
-  
-  @keyframes slide {
-	0%, 25% {
-	  transform: translateX(0%);
-	}
-	33.33%, 58.33% {
-	  transform: translateX(-100%);
-	}
-	66.66%, 91.66% {
-	  transform: translateX(-200%);
-	}
-	100% {
-	  transform: translateX(0%);
-	}
-  }
-  
-  /* Black Box Overlay */
-  .black-box {
+	margin: 0 auto;
+}
+
+.black-box {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -133,174 +131,40 @@ body {
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-  }
-  
-  /* Content Sections */
-  #AboutUs {
+}
+
+/* ---------------- Content Sections ---------------- */
+#AboutUs,
+#progressBar {
 	text-align: center;
 	padding: 40px 20px;
 	max-width: 800px;
 	margin: 0 auto;
-  }
-  
-  #progressBar {
-	text-align: center;
-	padding: 40px 20px;
-	max-width: 800px;
-	margin: 0 auto;
-  }
-  
-  /* Progress Bars */
-  progress {
+}
+
+/* ---------------- Progress Bars ---------------- */
+progress {
 	width: 80%;
 	height: 25px;
 	margin: 15px 0;
 	border-radius: 4px;
 	overflow: hidden;
-  }
-  
-  progress::-webkit-progress-bar {
-	background-color: #f0f0f0;
-	border-radius: 4px;
-  }
-  
-  progress::-webkit-progress-value {
-	background-color: #4CAF50;
-	border-radius: 4px;
-  }
-  
-  .dark-mode progress::-webkit-progress-bar {
-	background-color: #333;
-  }
-  
-  .dark-mode progress::-webkit-progress-value {
-	background-color: #2E7D32;
-  }
-
-/* Theme Toggle Styles */
-.theme-toggle {
-	background: none;
-	border: none;
-	cursor: pointer;
-	padding: 8px;
-	font-size: 1.2rem;
-	margin-left: 10px;
-	position: relative;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	/* Remove any color property here to inherit from nav */
-  }
-  
-  .sun-icon, .moon-icon {
-	position: absolute;
-	transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Light mode styles */
-  body:not(.dark-mode) .sun-icon {
-	opacity: 1;
-	transform: rotate(0deg);
-	color: inherit; /* Inherits color from nav a */
-  }
-  
-  body:not(.dark-mode) .moon-icon {
-	opacity: 0;
-	transform: rotate(-90deg);
-  }
-  
-  /* Dark mode styles */
-  body.dark-mode .sun-icon {
-	opacity: 0;
-	transform: rotate(90deg);
-  }
-  
-  body.dark-mode .moon-icon {
-	opacity: 1;
-	transform: rotate(0deg);
-	color: #ffd700; /* Gold color for moon */
-  }
-  
-  /* Remove these conflicting rules if they exist */
-  .theme-toggle {
-	color: #f0f0f0; /* DELETE if present */
-  }
-  
-  .dark-mode .theme-toggle {
-	color: #ffd700; /* DELETE if present */
-  }
-
-
-  /* Navigation */
-nav a {
-	display: inline-block;
-	padding: 12px 16px;
-	background-color: #dddddd;
-	color: #333; /* This color will be inherited by sun icon */
-	text-decoration: none;
-	border-radius: 4px;
-	transition: all 0.3s ease;
-  }
-  
-  .dark-mode nav a {
-	background-color: #333;
-	color: #f0f0f0; /* Color for dark mode */
-  }
-
-/* Slider Section */
-.background-image-section {
-	width: 100%;
-	position: relative;
-	overflow: hidden;
-	margin-bottom: 30px;
-  }
-  
-  .slider {
-	display: flex;
-	animation: slide 15s infinite ease-in-out;
-	align-items: center;     /* vertical center */
-  }
-  
-  .slider img {
-    width: 100%;
-    height: 826px; /* fixed height for all */
-    object-fit: cover; /* fill space without distortion */
 }
 
-nav {
-	background-color: black;
-	width: 100%;
-	display: flex;
-	align-items: center;     /* vertical alignment */
-	gap: 10px;               /* spacing between items */
-  }
-  
-  nav a:last-child {
-	margin-left: 0; /* remove this rule */
-  }
-  
-  .theme-toggle {
-	margin-left: auto;  /* push ONLY the toggle button to the far right */
-  }
-  
+progress::-webkit-progress-bar {
+	background-color: #f0f0f0;
+	border-radius: 4px;
+}
 
-  nav {
-	display: flex;
-	justify-content: space-between; /* links on left, toggle on right */
-	align-items: center;
-  }
-  
-  .nav-links {
-	display: flex;
-	gap: 10px; /* spacing between links */
-  }
-  
-  .carousel-inner img {
-	width: 960px;     /* fixed width */
-	height: 720px;    /* fixed height */
-	object-fit: cover; /* crop without distortion */
-	margin: 0 auto;    /* center horizontally */
-  }
-  
+progress::-webkit-progress-value {
+	background-color: #4CAF50;
+	border-radius: 4px;
+}
+
+.dark-mode progress::-webkit-progress-bar {
+	background-color: #333;
+}
+
+.dark-mode progress::-webkit-progress-value {
+	background-color: #2E7D32;
+}
