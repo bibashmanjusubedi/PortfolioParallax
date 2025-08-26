@@ -168,3 +168,48 @@ progress::-webkit-progress-value {
 .dark-mode progress::-webkit-progress-value {
 	background-color: #2E7D32;
 }
+
+
+#progressBar{
+	text-align: left;
+	padding:40px 20px;
+	max-width: 800px;
+	margin:0 auto;
+	display:flex;
+	flex-direction: column;
+	gap:20px;
+}
+
+/* Progress bar style */
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-row progress {
+    width: 400px;  /* your existing style */
+    height: 25px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+
+progress::-webkit-progress-bar {
+	background-color: #f0f0f0;
+	border-radius: 4px;
+}
+
+progress::-webkit-progress-value {
+	background-color: #4CAF50;
+	border-radius: 4px;
+}
+
+.dark-mode progress::-webkit-progress-bar {
+	background-color: #333;
+}
+
+.dark-mode progress::-webkit-progress-value {
+	background-color: #2E7D32;
+}
